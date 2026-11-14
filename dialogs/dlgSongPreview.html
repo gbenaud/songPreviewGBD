@@ -1,0 +1,105 @@
+<html class="dialog">
+	<head>
+		<script src="file:///mminit.js"></script>
+    	<script src="dlgSongPreview.js"></script>
+		<title>Song Preview</title>
+	</head>
+
+<body data-posSaveName="dlgSongPreviewSave" data-defaultSize="40em,20em">
+    <div data-id="dlgSongPreview" class="flex column padding nonGreedy">
+        <div class="padding wideControl hSeparator">
+            <table class="marginBottom paddingBottomLarge">
+				<tr>
+					<th colspan="4" data-tip="Preview Activation and Inactivation">Preview Activation and Inactivation</th>
+				</tr>
+				<tr data-id="rowEnableP">
+                    <td colspan="4">
+						<div data-id="chkEnablePreview" class="inline" data-control-class="Checkbox">Enable preview mode</div>
+                    </td>
+                </tr>
+                <tr data-id="rowCancelP">
+                    <td colspan="4">
+				        <div data-id="chkCancelPreview" class="inline" data-control-class="Checkbox">Cancel preview on user input</div>
+                    </td>
+                </tr>
+				<tr>
+					<th colspan="4" data-tip="Select start and End unit.">Start and End Specifications</th>
+				</tr>
+				<tr>
+                    <td data-add-colon>Start </td>
+                    <td colspan="3">
+                        <div class="stretchWidth" data-id="ddnStartSpec" data-control-class="Dropdown" data-init-params="{readOnly: true}">
+						</div>
+                    </td>
+				</tr>
+				<tr>
+                    <td data-add-colon>End </td>
+                    <td colspan="3">
+						<div class="stretchWidth" data-id="ddnEndSpec" data-control-class="Dropdown" data-init-params="{readOnly: true}">
+						</div>
+                     </td>
+                </tr>
+				<tr>
+					<th colspan="4" data-tip="Select start and End values.">Start and End Values</th>
+				</tr>
+				<tr><td colspan="4">First part preview</td></tr>
+				<tr data-id="Part1">
+					<td data-add-colon>
+					<!-- data-init-params="{type: 'number', min:0}  data-init-params="{readOnly: true} -->
+						<div data-id="edtStartValue" data-control-class="Edit" data-init-params="{type: 'number', min:0, value:0}"></div>
+					</td>
+					<td data-add-colon>
+						<label data-id="lblStartUnit">StartUnit</label>
+					</td>
+					<td data-add-colon>
+						<div data-id="edtEndValue" data-control-class="Edit" data-init-params="{type: 'number', min:0}"></div>
+					</td>
+					<td data-add-colon>
+						<label data-id="lblEndUnit">EndUnit</label>
+					</td>
+				</tr>
+
+			</table>
+        </div>
+		
+        <div class="padding wideControl hSeparator">
+            <table class="marginBottom paddingBottomLarge">		
+				<tr>
+					<td>
+					Preview Sample :   
+					</td>
+				</tr>	
+				<tr>
+					<td>
+				    <FONT face="Courier New">
+					...1...2...3...4...5...6...7...8...9...0  100%
+					</FONT>
+					</td>
+				</tr>		
+				<tr>
+					<td>
+				    <FONT face="Courier New">
+					.1 . * . . 1 . . * . . 2 . . * . . 3 . .  3'20
+					</FONT>
+					</td>
+				</tr>		
+				<tr>
+					<td>
+					<FONT face="Courier New" data-id="sample">
+					........................................
+					</FONT>
+					</td>
+				</tr>	
+			</table>
+        </div>		
+	
+		
+        <div id="bottom" class="bgColorBase alignbottom fillWidth">
+            <div data-control-class="Buttons">
+                <div data-id="btnOK" data-default="1" data-tip="Save and Close Window"></div>
+                <div data-id="btnCancel" data-tip="Close Without Saving"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

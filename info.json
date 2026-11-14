@@ -1,0 +1,9 @@
+{
+    "title": "Song Preview",
+    "id": "songPreviewGBD",
+    "description": "Song Preview",
+    "version": "1.0.0",
+    "type": "general",
+    "author": "gb63",
+    "icon": "songPreview.svg"
+}
