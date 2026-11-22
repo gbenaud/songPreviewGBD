@@ -38,6 +38,7 @@ function btnOkClick() {
     const posLabelEnd = TABLE_LABEL.indexOf(UI.ddnEndSpec.controlClass.value);
     // valeurs a sauvegarder
     sett.setEnablePreview = UI.chkEnablePreview.controlClass.checked;
+    sett.setDisplayPreview = UI.chkDisplayPreview.controlClass.checked;
     sett.setCancelPreview = UI.chkCancelPreview.controlClass.checked;
 	sett.setStartSpec   = TABLE_SPEC[posLabelStart]; 
 	sett.setEndSpec     = TABLE_SPEC[posLabelEnd];
@@ -79,6 +80,7 @@ function init(params) {
 	// recup valeur sauvegardees - ou valeur / defaut
 	sett = app.getValue('SongPreviewGBD_settings',{
 		setEnablePreview : false,     // Enable Preview 
+		setDisplayPreview : true,      // Display preview button
 		setCancelPreview : true,     // Cancel Preview on update 
 		setStartSpec     : 'StartPercentage',
 		setEndSpec       : 'TimePeriod',
@@ -136,6 +138,7 @@ function init(params) {
 
     // alimente les bouton "enable preview" et "cancel on update"
     UI.chkEnablePreview.controlClass.checked = sett.setEnablePreview;
+    UI.chkDisplayPreview.controlClass.checked = sett.setDisplayPreview !== false;
     UI.chkCancelPreview.controlClass.checked = sett.setCancelPreview;
     
 	UI.chkCancelPreview.controlClass.disabled = true;

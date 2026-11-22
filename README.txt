@@ -3,7 +3,7 @@ Info :
 ************************************************************************************************
 Song Preview for MediaMonkey 
 
-Version: 1.0.0 
+Version: 2.0.0 
 Author : "GB63" - Gilles Benaud -
 Created: 2023
 License: Creative Commons BY SA 
@@ -45,9 +45,13 @@ Choose portion to listen with dropdown choice and values :
 a basic sample is show to help you   
 
 When song is playing, with a right click on Play/Pause button ( |> || ) on player, you can Enable or Disable preview.
+The player button shows radio_button_partial when preview is enabled and radio_button_checked when it is disabled.
 
 ************************************************************************************************
 Change : 
 ************************************************************************************************
-
+Version 2.0.0 : 
+- add Preview button in player 
+- add checkbox in setup to display or not this button
+- improve code readability
 ------------------------------------------------------------------------------------------------
